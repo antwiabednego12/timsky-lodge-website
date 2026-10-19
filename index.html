@@ -432,6 +432,54 @@ text-shadow: 0 0 5px #ff3333, 0 0 12px #ff3333;
         font-size: 14px;
     }
 }
+.facilities {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.facility-card {
+    padding: 28px 22px;
+    background: #f8f7f3;
+    border: 1px solid #e8bd72;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+}
+
+.facility-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.facility-card h3 {
+    color: #172b4d;
+    margin-bottom: 10px;
+}
+
+.facility-card p {
+    color: #555555;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 
@@ -643,6 +691,58 @@ text-shadow: 0 0 5px #ff3333, 0 0 12px #ff3333;
             <p>
                 Contact our team directly about your
                 accommodation requirements.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section class="facilities" id="facilities">
+    <div class="section-heading">
+        <p class="eyebrow">Comfort & Convenience</p>
+
+        <h2>Our Hotel Facilities</h2>
+
+        <p>
+            Enjoy convenient facilities during your stay
+            at Timsky Lodge Hotel.
+        </p>
+    </div>
+
+    <div class="facilities-grid">
+
+        <div class="facility-card">
+            <div class="facility-icon">❄️</div>
+            <h3>Air Conditioning</h3>
+            <p>
+                Enjoy air-conditioned accommodation
+                during your stay.
+            </p>
+        </div>
+
+        <div class="facility-card">
+            <div class="facility-icon">📺</div>
+            <h3>Television</h3>
+            <p>
+                Relax with television entertainment
+                in your room.
+            </p>
+        </div>
+
+        <div class="facility-card">
+            <div class="facility-icon">🚿</div>
+            <h3>Hot Water</h3>
+            <p>
+                Enjoy the convenience of hot water
+                during your stay.
+            </p>
+        </div>
+
+        <div class="facility-card">
+            <div class="facility-icon">🎉</div>
+            <h3>Conference & Events</h3>
+            <p>
+                Contact us to enquire about facilities
+                for your conference or event.
             </p>
         </div>
 
