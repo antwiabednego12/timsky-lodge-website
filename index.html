@@ -328,6 +328,110 @@ text-shadow: 0 0 5px #ff3333, 0 0 12px #ff3333;
                 font-size: 28px;
             }
         }
+        .christmas-welcome {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+    animation: christmasGlow 4s infinite;
+}
+
+@keyframes christmasGlow {
+    0%, 100% {
+        color: #ff3333;
+        text-shadow: 0 0 8px #ff3333, 0 0 18px #ff3333;
+    }
+
+    25% {
+        color: #39ff14;
+        text-shadow: 0 0 8px #39ff14, 0 0 18px #39ff14;
+    }
+
+    50% {
+        color: #ffd700;
+        text-shadow: 0 0 8px #ffd700, 0 0 18px #ffd700;
+    }
+
+    75% {
+        color: #00bfff;
+        text-shadow: 0 0 8px #00bfff, 0 0 18px #00bfff;
+    }
+}
+
+@media (max-width: 600px) {
+    .christmas-welcome {
+        font-size: 20px;
+    }
+}
+.features {
+    padding: 60px 20px;
+    background: #f5f7fa;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #172b4d;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .floating-whatsapp {
+        bottom: 15px;
+        right: 12px;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
     </style>
 </head>
 
@@ -347,8 +451,9 @@ text-shadow: 0 0 5px #ff3333, 0 0 12px #ff3333;
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <p class="eyebrow">Welcome to Timsky Lodge Hotel</p>
-
+                <h2 class="christmas-welcome">
+    🎄 WELCOME TO TIMSKY LODGE HOTEL 🎄
+</h2>
                 <h1>Your Comfort, Our Priority.</h1>
 
                 <p>
@@ -497,7 +602,52 @@ text-shadow: 0 0 5px #ff3333, 0 0 12px #ff3333;
 </p>
 
 </section>
+<section class="features" id="features">
+    <div class="section-heading">
+        <p class="eyebrow">Experience Timsky Lodge</p>
+        <h2>Why Choose Timsky Lodge?</h2>
+        <p>
+            Discover a convenient place to stay in
+            Kpong Ahundjo Islamic, Eastern Region, Ghana.
+        </p>
+    </div>
 
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <h3>🛏️ Comfortable Accommodation</h3>
+            <p>
+                Choose between our Standard and Double rooms
+                to suit your accommodation needs.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📍 Convenient Location</h3>
+            <p>
+                Find us at Kpong Ahundjo Islamic,
+                Eastern Region, Ghana.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📞 Easy Enquiries</h3>
+            <p>
+                Call or WhatsApp us to enquire about room
+                prices and availability.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🤝 Personalised Service</h3>
+            <p>
+                Contact our team directly about your
+                accommodation requirements.
+            </p>
+        </div>
+
+    </div>
+</section>
         <section class="contact" id="contact">
             <div class="section-heading">
                 <p class="eyebrow">Get in Touch</p>
@@ -526,6 +676,12 @@ href="https://wa.me/233240922022"
 target="_blank"
 rel="noopener noreferrer">
 Chat with Us on WhatsApp
+</a>
+<a class="button button-gold"
+   href="https://maps.app.goo.gl/xG2bw4hsmn7KLYys6"
+   target="_blank"
+   rel="noopener noreferrer">
+    📍 Get Directions
 </a>
 <h3>Room Booking Enquiry</h3>
 
@@ -605,7 +761,16 @@ function sendBookingEnquiry(event) {
         "https://wa.me/233240922022?text=" + message,
         "_blank"
     );
+
+
 }
 </script>
+<a class="floating-whatsapp"
+   href="https://wa.me/233240922022"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact Timsky Lodge Hotel on WhatsApp">
+    WhatsApp
+</a>
 </body>
 </html>
